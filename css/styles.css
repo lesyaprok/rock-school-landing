@@ -436,6 +436,7 @@ main {
     font-size: 36px;
     line-height: 42px;
     color: #C4C4C4;
+    text-transform: uppercase;
 }
 
 .teachers-name {
@@ -467,6 +468,7 @@ main {
 
 .galery {
     padding-top: 60px;
+    padding-bottom: 128px;
     background-color: #241D1D;
 }
 
@@ -479,11 +481,31 @@ main {
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
+    text-transform: uppercase;
 }
 
 .galery-container {
     display: flex;
 }
 
+.galery-left img:nth-child(1),
+.galery-left img:nth-child(3) {
+    margin-right: 50px;
+}
+
+.galery-left img:nth-child(1),
+.galery-left img:nth-child(2) {
+    margin-bottom: 50px;
+}
+
+.galery-right {
+    position: relative;
+}
+
+.galery-right img:last-child {
+    position: absolute;
+    bottom: -10%;
+    right: 50%;
+}
  
 
