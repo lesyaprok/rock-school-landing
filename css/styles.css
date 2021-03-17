@@ -1,0 +1,489 @@
+@font-face {
+    font-family: FuturaLightC;
+    src: url(./../fonts/futuralightc.ttf);
+}
+@font-face {
+    font-family: FuturaDemiC;
+    src: url(./../fonts/futurademic.ttf);
+}
+@font-face {
+    font-family: GothamPro;
+    src: url(./../fonts/gothampro.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.none {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+div {
+    cursor: default;
+}
+
+/* Header */
+
+.header {
+    max-width: 1440px;
+    width: 100%;
+    /* height: 748px; */
+    background-image: url('./../img/header.jpg');
+    /* background-position: left; */
+    background-size: cover;
+}
+
+.header-top {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 40px 0 0 150px;
+}
+
+.header-logo {
+    display: inline-block;
+    margin-right: 54px;
+    width: 100px;
+    font-family: "FuturaLightC", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.header-navbar {
+    /* max-width: 768px;
+    min-width: 700px; */
+    padding-top: 8px;
+    padding-left: 9px;
+}
+
+.header-navbar-items {
+    /* width: 768px; */
+    /* max-width: 768px; */
+    width: 57vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 18px;
+    padding: 0;
+    
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header-navbar-item {
+    /* margin-right: 40px; */
+    /* margin-bottom: 20px; */
+    font-family: "Gotham Pro", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+    list-style: none;
+}
+
+.header-navbar-item a{ 
+    display: block;
+    height: 100%;
+    color: #000;   
+    transition:  0.3s ease-in;
+}
+
+.header-navbar-item a:hover {
+    font-weight: 600;
+    font-size: 20px;
+    /* color: gold; */
+}
+
+.header-navbar-social {
+    max-height: 24px;
+}
+
+
+.navbar-facebook {
+    display: inline-block;
+    margin-right: 20px;
+    background-image: url('./../img/icons/facebook.svg');
+    width: 24px;
+    height: 24px;
+    transition: 0.3s ease-in;
+}
+
+.navbar-facebook:hover,
+.navbar-insta:hover {
+    transform: translateY(6px);
+}
+
+.navbar-insta {
+    display: inline-block;
+    background-image: url('./../img/icons/instagram.svg');
+    width: 24px;
+    height: 24px;
+    transition: 0.3s ease-in;
+}
+
+.header-main {
+    max-width: 948px;
+    margin-left: 150px;
+    padding-top: 197px;
+    padding-bottom: 180px;
+}
+
+.header-title {
+    margin: 0;
+    padding-left: 93px;
+    color: #fff;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 112px;
+}
+
+.header-title span {
+    color: #FFA800;
+}
+
+.header-subtitle {
+    margin-top: 29px;
+    padding-left: 96px;
+    font-family: "FuturaDemiC";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-button {
+    display: block;
+    margin-left: 96px;
+    max-width: 291px;
+    margin-top: 26px;
+    padding:  20px 86px;
+    border: 3px solid #FFA800;
+    background-color: #FFA800;
+    color: #fff;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    transition: all 0.5s ease-in;
+    /* text-transform: uppercase; */
+}
+
+.header-button:hover  {
+    /* color: #FFA800;
+    background-color: #fff;
+    border-color: #fff; */
+    transform: translateY(12px);
+    background-color: #ffffff13;
+}
+
+
+/* Main */
+
+main {
+    background-color: #181818;
+    width: 100%;
+}
+
+.prices-background {
+    background-image: url('./../img/main/micro.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container {
+    max-width: 1185px;
+    /* height: 100%; */
+    margin: 0 auto;
+    
+}
+
+/* Prices */
+
+.prices {
+    /* height: 776px; */
+    width: 100%;
+    background-color: #181818;   
+}
+
+.prices-title {
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.prices-container {
+    padding-top: 96px;
+    max-width: 843px;
+}
+.prices-cards {
+    margin-top: 90px;
+    padding-bottom: 158px;
+    display: flex;
+    justify-content: space-between;
+}
+.prices-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 261px;
+    height: 396px;
+    background-color: #fff;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.prices-card:hover {
+    transform: translateY(-20px);
+}
+
+.prices-card-title {
+    font-family: "FuturaDemiC";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.prices-card p {
+    font-family: "FuturaDemiC";
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.prices-card-price {
+    font-family: "FuturaDemiC";
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+    color: #000000;
+}
+
+.prices-card-button {
+    display: block;
+    width: 100%;
+    padding: 17px 0 17px;
+    text-align: center;
+    font-family: "GothamPro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 15px;
+    background-color:  #FFA800;
+    color: #000000;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.prices-card-button:hover {
+    color:  #FFA800;
+    background-color: #000000;
+}
+
+.prices-card:last-child {
+    background-color: #FFA800;  
+}
+
+.prices-card:last-child a{
+    background-color:  #FFF;
+}
+
+/* Instruments */
+
+.instruments {
+    padding-top: 135px;
+    padding-bottom: 280px;
+    height: 652px;
+    background-color: #353232;
+    background-image: url('./../img/main/vinyl.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.instruments-title {
+    text-align: center;
+    color: #FFF;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.instruments-items {
+    margin-top: 132px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.instruments-item {
+    position: relative;
+    display: flex;
+    padding-left: 5px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #FFF;
+    height: 69px;
+    width: 160px;
+    text-transform: uppercase;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    line-height: 23px;
+    color: #000000;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.instruments-item::after {
+        content: "▼";
+        margin-left: 5px;
+      }
+
+.instruments-item:nth-child(4)::after {
+    content: '';
+}      
+
+.instruments-item a {
+    color: #000000;
+}
+
+.dropdown {
+    /* visibility: hidden; */
+    opacity: 0;
+    margin-top: 0;
+    padding: 0;
+    min-width: 165px;
+    background-color: #FFA800;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease;
+    list-style-type: none;
+    z-index: 100;
+  /* left: 0; */
+  /* display: none; */
+}
+
+.dropdown li {
+    padding: 10px;
+    color: #FFF;
+}
+
+.dropdown li:hover {
+    background-color: #FFF;
+    color: #FFA800;
+}
+
+.dropdown:hover {
+        /* visibility: visible; */
+        opacity: 1;
+        display: block;
+}
+
+.dropdown:hover {
+    /* visibility: visible; */
+    color: orange;
+}
+
+/* Teachers */
+
+.teachers-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teachers-item {
+    max-width: 450px;
+}
+
+.teachers-title {
+    padding-top: 106px;
+    padding-bottom: 77px;
+    text-align: center;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    color: #C4C4C4;
+}
+
+.teachers-name {
+    /* font-family: Actor; */
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFA800;
+    text-align: center;
+}
+
+.teachers-description {
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 300px;
+    height: 275px;
+    font-family: "GothamPro";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+    text-align: center;
+    color: #000000;
+    background-color: #FFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Galery */
+
+.galery {
+    padding-top: 60px;
+    background-color: #241D1D;
+}
+
+.galery-title {   
+    padding-bottom: 90px;
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.galery-container {
+    display: flex;
+}
+
+ 
+
