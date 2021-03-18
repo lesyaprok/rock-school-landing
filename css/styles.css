@@ -23,10 +23,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease;
 }
 
 .none {
-    display: none;
+    display: none !important;
+    opacity: 0;
 }
 
 a {
@@ -103,7 +105,7 @@ div {
 }
 
 .header-navbar-item a:hover {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     /* color: gold; */
 }
@@ -406,12 +408,13 @@ main {
         /* visibility: visible; */
         opacity: 1;
         display: block;
+        color: orange;
 }
 
 .dropdown:hover {
     /* visibility: visible; */
-    color: orange;
-}
+    /* color: orange; */
+} 
 
 /* Teachers */
 
@@ -507,5 +510,190 @@ main {
     bottom: -10%;
     right: 50%;
 }
+
+.galery img {
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+/* .galery img:hover {
+    border: 2px solid #FFA800;
+} */
  
+/* Contacts */
+
+.contacts {
+    display: block;
+    position: relative;
+    padding-top: 67px;
+    height: 382px;
+    /* padding-top: 67px; */
+    /* padding-bottom: 150px;  */
+    background-image: url('./../img/header.jpg');
+    /* background-size: cover; */
+    background-position: -10px -50px;
+}
+
+.contacts-container {
+    padding-top: 67px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 150px;
+    max-width: 950px;  
+}
+
+.footer-logo {
+    color: #FFF;
+    margin-bottom: 32px;
+}
+
+.footer-navbar-social {
+    width: 24px;
+}
+
+.footer-facebook:hover {
+    transform: translateY(-6px);
+}
+
+.footer-contacts {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    float: right;
+    /* width: 50%; */
+}
+
+.footer-contacts-title {
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.footer-contacts p {
+    font-family: "FuturaDemiC", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    text-align: center;
+}
+
+.footer-navbar {
+    display: block;
+    margin-top: 85px;
+    padding-left: 0;
+    width: 100%;
+}
+
+.footer-navbar-items {
+    width: 100%;
+}
+
+.footer-navbar-items li {
+    margin-right: 30px;
+}
+
+.footer-navbar-items a {
+    color: #FFF;
+}
+
+.footer-navbar-item a:hover {
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFA800;
+}
+
+.map-box {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Modal window */
+
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+.modal-window {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFA800;
+    width: 1005px;
+    height: 498px;
+    background-image: url('./../img/modal/modal-background.jpg');
+}
+
+.modal-title {
+    font-family: "GothamPro", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 23px;
+    color: #FFA800;
+}
+
+.modal-form p {
+    margin: 0;
+    font-family: "GothamPro", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFA800;
+} 
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item input,
+.form-item select {
+    padding: 10px;
+    width: 558px;
+    height: 47px;
+    background: rgba(196, 196, 196, 0.8);
+    border: none;
+    outline: none;
+}
+
+.form-button button {
+    margin: 0 auto;
+    margin-left: 20%;
+    text-align: center;
+    vertical-align: middle;
+    width: 364px;
+    height: 35px;
+    background-color: #FFA800;
+    border: none;
+}
+
+.form-button button a {
+    color: black;
+}
+
+.modal-close {
+    position: absolute;
+    right: 5px; 
+    top: 5px;
+    background-image: url('./../img/modal/close.png');
+    
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
 

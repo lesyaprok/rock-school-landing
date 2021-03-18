@@ -22,7 +22,7 @@
                     <li class="header-navbar-item"><a href="#galery">Галерея</a></li>
                     <li class="header-navbar-item"><a href="#teachers">Преподаватели</a></li>
                     <li class="header-navbar-item"><a href="#instruments">Инструменты</a></li>
-                    <li class="header-navbar-item"><a href="contacts">Контакты</a></li>
+                    <li class="header-navbar-item"><a href="#contacts">Контакты</a></li>
                     <div class="header-navbar-social">
                         <li class="header-navbar-item navbar-facebook"><a href="https://facebook.com"></a></li>
                         <li class="header-navbar-item navbar-insta"><a href="https://instagram.com"> </a></li>
@@ -39,7 +39,7 @@
             <h3 class="header-subtitle">
                 Зарегистрируйтесь на бесплатный пробный урок
             </h3>
-            <a href="#" class="header-button">
+            <a id="registration" href="#" class="header-button" onclick="showModal()">
                 Зарегистрироваться
             </a>
 
@@ -201,48 +201,101 @@
                 </div>
             </div>
         </section>
+        <footer class="contacts" id="contacts">
+            <div class="contacts-container">
+                
+                    <div class="header-logo footer-logo">
+                        Rock Star
+                    </div>
+                    <div class="header-navbar-social footer-navbar-social">
+                        <li class="header-navbar-item navbar-facebook footer-facebook"><a href="https://facebook.com"></a></li>
+                        <li class="header-navbar-item navbar-insta footer-insta"><a href="https://instagram.com"> </a></li>
+                    </div>
+                    <div class="footer-contacts">
+                        <h3 class="footer-contacts-title">Контакты</h3>
+                        <p>+375298473816</p>
+                        <p>+375333606800</p>
+                        <p>+375291445678</p>
+                    </div>
+                    <nav class="header-navbar footer-navbar">
+                        <ul class="header-navbar-items footer-navbar-items">
+                            <li class="header-navbar-item footer-navbar-item"><a href="#price">Цены, абонементы</a></li>
+                            <li class="header-navbar-item footer-navbar-item"><a href="#galery">Галерея</a></li>
+                            <li class="header-navbar-item footer-navbar-item"><a href="#teachers">Преподаватели</a></li>
+                            <li class="header-navbar-item footer-navbar-item"><a href="#instruments">Инструменты</a></li>
+                            <li class="header-navbar-item footer-navbar-item"><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+            </div>
+            <div class="map-box">
+                <img src="./img/footer/map.jpg" alt="">
+            </div>
+        </footer>
     </main>
+    <section class="none modal-overlay" id="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-close" onclick="closeModal()">
+            </div>
+            <h3 class="modal-title">Регистрация на бесплатное пробное занятие</h3>
+            <form class="modal-form" action="">
+                <div class="form-item form-name">
+                    <p>Имя Фамилия</p>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-item form-phone">
+                    <p>Номер телефона</p>
+                    <input type="tel" name="tel" required max="13" id="tel" value="+375 (__) ___ __ __">
+                </div>
+                <div class="form-item form-choose-instrument">
+                    <p>Выберите инструмент</p>
+                    <select name="" id="">
+                        <option value="">Фортепиано</option>
+                    </select>
+                </div>
+                <div class="form-button">
+                    <button><a href="#">Зарегистрироваться</a></button>
+                </div>
+                
+                
+            </form>
+            <p></p>
+        </div>
+    </section>
+
+    <script>       
+
+        function showModal(modal) {
+            modal = document.getElementById("modal-overlay");
+            modal.classList.remove("none");
+        }    
+
+        function closeModal(modal) {
+            console.log('modal');
+            modal = document.getElementById("modal-overlay");
+            modal.classList.add("none");
+        }
+    </script>
+
+    <script>
+        let inp = document.querySelector('#tel');
+
+        // Проверяем фокус
+        inp.addEventListener('focus', _ => {
+        // Если там ничего нет или есть, но левое
+            if(!/^\+\d*$/.test(inp.value))
+        // То вставляем знак плюса как значение
+            inp.value = '+375';
+});
+
+        inp.addEventListener('keypress', e => {
+        // Отменяем ввод не цифр
+        if(!/\d/.test(e.key))
+        e.preventDefault();
+});
+    </script>
+
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <style>
-    .fff {
-        display: inline-block;
-        width: 300px;
-        height: 100px;
-        line-height: 100px;
-        text-align: center;  
-     background-image: linear-gradient(to right, #191 20px, transparent 20px, transparent 280px, #191 280px),
-        linear-gradient(to right, #191 20px, transparent 20px, transparent 280px, #191 280px),
-        linear-gradient(to bottom, #191 20px, transparent 20px, transparent 80px, #191 80px),
-        linear-gradient(to bottom, #191 20px, transparent 20px, transparent 80px, #191 80px);
-        background-size: 100% 5px, 100% 5px, 5px 100%, 5px 100%;
-        background-position: 0 0, 0 100%, 0 0, 100% 0;
-        background-repeat: no-repeat;
-}
-
-
-    
-    
-    
-</style> -->
 
 </html>
